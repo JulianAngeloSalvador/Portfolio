@@ -1,8 +1,7 @@
 import "./src/styles/global.css"
+import React from "react"
+import ThemeContextProvider from "./src/contexts/theme-context"
 
-/**
- * @type {import('gatsby').GatsbySSR['onRenderBody']}
- */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
-  setHtmlAttributes({ lang: `en` })
-}
+export const wrapRootElement = ({ element }) => (
+  <ThemeContextProvider>{element}</ThemeContextProvider>
+)

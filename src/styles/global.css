@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Nav Component */
+  .main-nav {
+    @apply bg-primary grid grid-cols-3 py-4 px-8;
+  }
+
+  .main-nav > * {
+    @apply text-secondary;
+  }
+
+  .navlink-container {
+    @apply flex items-center gap-x-4 font-semibold;
+  }
+
+  /* Menu Button (Mobile) */
+  .menu-button {
+    @apply w-8 h-4;
+  }
+  .menu-icon {
+    @apply bg-secondary first:mt-0 mt-1 h-[2.5px] w-full rounded-full origin-left;
+  }
+}
+
+@layer utilities {
+  .guide1 {
+    outline: 1px solid pink;
+  }
+
+  .guide2 {
+    outline: 1px solid teal;
+  }
+
+  /* Nav Component */
+  [data-theme="light"] .brand-logo {
+    filter: invert(1);
+  }
+  [data-theme="dark"] .brand-logo {
+    filter: invert(0);
+  }
+
+  /* Theme Toggler Component  */
+  .toggler-icon {
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}
+
+@layer base {
+  html,
+  body {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    height: 100%;
+  }
+}
