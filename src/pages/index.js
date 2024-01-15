@@ -1,11 +1,11 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 
-const IndexPage = () => <Layout></Layout>
-
-export default IndexPage
+export default function Index() {
+  return <Layout></Layout>
+}
 
 // <StaticImage
 //   src="../images/example.png"

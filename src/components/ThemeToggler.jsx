@@ -22,7 +22,7 @@ export default function ThemeToggler() {
   }
 
   return (
-    <div className="flex justify-between items-center gap-x-2 p-2 theme-toggler">
+    <div className="flex justify-between items-center gap-x-2 py-2 theme-toggler">
       <button
         onClick={handleTheme}
         className={`relative rounded-full w-12 h-6 bg-secondary flex justify-start py-0.5 ${
