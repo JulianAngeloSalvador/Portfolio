@@ -41,10 +41,12 @@ export default {
       dark: {
         primary: "#181818",
         secondary: "#ededed",
+        tertiary: "#242424",
       },
       light: {
         primary: "#ededed",
         secondary: "#181818",
+        tertiary: "#DBDBDB",
       },
     }),
   ],

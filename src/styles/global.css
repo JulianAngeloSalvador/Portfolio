@@ -13,7 +13,7 @@
   }
 
   .navlink-container {
-    @apply flex items-center font-semibold;
+    @apply hidden lg:flex items-center font-semibold;
   }
 
   /* Menu Button (Mobile) */
@@ -22,6 +22,11 @@
   }
   .menu-icon {
     @apply bg-secondary first:mt-0 mt-1 h-[2.5px] w-full rounded-full origin-left;
+  }
+
+  /* Aside Nav Component */
+  .aside-nav {
+    @apply fixed top-0 left-0 h-dvh bg-tertiary w-full sm:w-80;
   }
 }
 
