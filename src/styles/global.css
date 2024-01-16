@@ -26,11 +26,15 @@
 
   /* Aside Nav Component */
   .aside-nav {
-    @apply fixed top-0 left-0 h-dvh bg-tertiary w-full sm:w-80 z-[100] text-secondary;
+    @apply fixed top-0 left-0 h-dvh w-full sm:w-80 z-[100] text-secondary  bg-secondary;
   }
 
-  .aside-nav ul .navlink {
-    @apply block py-4 text-center;
+  .aside-nav .navlink {
+    @apply relative isolate block py-4 text-center before:absolute before:w-4/5 before:md:w-full before:h-full before:left-1/2 before:-translate-x-1/2 before:md:-left-full before:md:-translate-x-0 before:opacity-0 before:top-1/2 before:bg-secondary before:-translate-y-1/2 before:-z-[1] transition-all duration-[.3s] before:transition-all before:duration-[.3s]  ease-swift-ease-out before:ease-swift-ease-out before:rounded-xl md:before:rounded-tl-none md:before:rounded-bl-none md:before:rounded-tr-xl md:before:rounded-br-xl before:scale-x-0 before:md:scale-x-100 before:md:origin-left;
+  }
+
+  .aside-nav .navlink.active {
+    @apply text-primary font-bold before:opacity-100 before:md:-left-0  before:md:-translate-x-3 before:scale-x-100 md:pr-4 md:tracking-wide;
   }
 }
 

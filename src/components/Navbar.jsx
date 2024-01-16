@@ -97,11 +97,8 @@ export default function Navbar() {
 
   const handleActiveLink = index => {
     setActiveLink(index)
+    screen <= 1023 && setIsOpen(isOpen => !isOpen)
   }
-
-  useEffect(() => {
-    console.log(activeLink)
-  }, [activeLink])
 
   return (
     <>
@@ -187,8 +184,8 @@ export default function Navbar() {
           <span className="absolute w-full h-0.5 left-0 bg-secondary rounded-md rotate-45"></span>
           <span className="absolute w-full h-0.5 left-0 bg-secondary rounded-md -rotate-45"></span>
         </motion.button>
-        <section className=" h-full flex flex-col justify-center gap-y-20">
-          <ul className="flex flex-col flex-1 sm:flex-grow-0 justify-center w-full gap-y-7 pt-24 sm:pt-0">
+        <section className="bg-tertiary h-full flex flex-col justify-center gap-y-20 ">
+          <ul className="flex flex-col flex-1 sm:flex-grow-0 justify-center w-full gap-y-7 pt-24">
             <Navlinks
               handleLinkIndicator={handleLinkIndicator}
               handleActiveLink={handleActiveLink}
@@ -196,7 +193,7 @@ export default function Navbar() {
             />
           </ul>
 
-          <ul className="flex justify-center gap-x-8 w-full md:justify-self-end">
+          <ul className="flex justify-center gap-x-8 w-full md:justify-self-end py-4">
             <Socials />
           </ul>
         </section>

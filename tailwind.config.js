@@ -8,6 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {},
+      transitionTimingFunction: {
+        "swift-ease-out": "cubic-bezier(0.43, 0.13, 0.23, 0.96)",
+      },
       screens: {
         "3xl": { min: "2500px" },
         "2xl_max": { max: "1535px" },
