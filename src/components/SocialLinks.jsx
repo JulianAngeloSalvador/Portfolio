@@ -52,6 +52,7 @@ export default function Socials() {
               damping: 15,
               delay: 0.1,
             }}
+            className="social-link"
           >
             <a
               href={link.link}

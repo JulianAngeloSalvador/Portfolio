@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import ThemeToggler from "./ThemeToggler"
 import { StaticImage } from "gatsby-plugin-image"
 import Navlinks from "./Navlinks"
@@ -49,19 +49,69 @@ const menuIcon = {
     },
   },
 }
-
+const dimmer = {
+  inactive: {
+    opacity: 0,
+    pointerEvents: "none",
+  },
+  active: {
+    opacity: 1,
+    pointerEvents: "auto",
+  },
+}
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [screen, setScreen] = useState("")
+  // const email = process.env.GATSBY_CONTACT_EMAIL
+  // const encodeEmail = email => window.btoa(email)
   const indicator = useRef(null)
 
   const handleLinkIndicator = target => {
-    if (indicator.current) {
+    if (indicator.current && screen >= 1023) {
       indicator.current.style.left = target.offsetLeft + "px"
       indicator.current.style.width = target.offsetWidth + "px"
     }
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreen(window.innerWidth)
+    }
+
+    handleResize()
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (screen >= 1023) {
+      setIsOpen(false)
+    }
+  }, [screen])
+
+  const [activeLink, setActiveLink] = useState(null)
+
+  const handleActiveLink = index => {
+    setActiveLink(index)
+  }
+
+  useEffect(() => {
+    console.log(activeLink)
+  }, [activeLink])
+
   return (
     <>
+      <motion.div
+        className="dimmer"
+        variants={dimmer}
+        initial="inactive"
+        animate={isOpen ? "active" : "inactive"}
+        onClick={() => setIsOpen(isOpen => !isOpen)}
+      />
       <nav className="main-nav">
         <div className="flex lg:hidden items-center">
           <motion.button
@@ -90,8 +140,15 @@ export default function Navbar() {
           </motion.button>
         </div>
         <ul className="navlink-container  gap-x-6 relative">
-          <Navlinks onLinkClick={handleLinkIndicator} />
-          <div className="navlink-indicator" ref={indicator}></div>
+          <Navlinks
+            handleLinkIndicator={handleLinkIndicator}
+            handleActiveLink={handleActiveLink}
+            activeLink={activeLink}
+          />
+          <div
+            className="navlink-indicator hidden lg:block"
+            ref={indicator}
+          ></div>
         </ul>
         <header className="flex justify-center items-center">
           <a href="/">
@@ -117,7 +174,7 @@ export default function Navbar() {
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         className="aside-nav"
-        transition={{ type: "tween", delay: 0.2 }}
+        transition={{ type: "tween", delay: 0.15 }}
         style={{ transformOrigin: "left" }}
       >
         <motion.button
@@ -130,7 +187,35 @@ export default function Navbar() {
           <span className="absolute w-full h-0.5 left-0 bg-secondary rounded-md rotate-45"></span>
           <span className="absolute w-full h-0.5 left-0 bg-secondary rounded-md -rotate-45"></span>
         </motion.button>
+        <section className=" h-full flex flex-col justify-center gap-y-20">
+          <ul className="flex flex-col flex-1 sm:flex-grow-0 justify-center w-full gap-y-7 pt-24 sm:pt-0">
+            <Navlinks
+              handleLinkIndicator={handleLinkIndicator}
+              handleActiveLink={handleActiveLink}
+              activeLink={activeLink}
+            />
+          </ul>
+
+          <ul className="flex justify-center gap-x-8 w-full md:justify-self-end">
+            <Socials />
+          </ul>
+        </section>
       </motion.aside>
     </>
   )
+}
+
+{
+  /* <motion.button
+  whileHover={{ scale: 1.1 }}
+  transition={{ duration: 0.3, type: "spring" }}
+  className="landing-buttons-text bg-secondary text-primary py-2 px-4"
+  onClick={() => {
+    window.location.href = `mailto:${decodeURIComponent(
+      window.atob(encodeEmail(email))
+    )}`
+  }}
+>
+  Let's Connect
+</motion.button> */
 }

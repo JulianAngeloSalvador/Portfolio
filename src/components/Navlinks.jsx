@@ -1,6 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 
-export default function Navlinks({ onLinkClick }) {
+export default function Navlinks({
+  handleLinkIndicator,
+  activeLink,
+  handleActiveLink,
+}) {
   const navlinks = [
     {
       title: "About",
@@ -19,11 +23,6 @@ export default function Navlinks({ onLinkClick }) {
       tabIndex: "#contact",
     },
   ]
-  const [activeLink, setActiveLink] = useState(null)
-
-  const handleActiveLink = index => {
-    setActiveLink(index)
-  }
 
   return (
     <>
@@ -33,9 +32,9 @@ export default function Navlinks({ onLinkClick }) {
             href={link.tabIndex}
             onClick={e => {
               handleActiveLink(index)
-              onLinkClick(e.target)
+              handleLinkIndicator(e.target)
             }}
-            className={activeLink === index ? "navlink-active" : ""}
+            className={activeLink === index ? "navlink active" : "navlink"}
           >
             {link.title}
           </a>
