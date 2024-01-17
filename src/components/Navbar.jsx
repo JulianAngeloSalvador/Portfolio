@@ -62,8 +62,6 @@ const dimmer = {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [screen, setScreen] = useState("")
-  // const email = process.env.GATSBY_CONTACT_EMAIL
-  // const encodeEmail = email => window.btoa(email)
   const [activeLink, setActiveLink] = useState(null)
   const indicator = useRef(null)
 
@@ -109,7 +107,7 @@ export default function Navbar() {
         onClick={() => setIsOpen(isOpen => !isOpen)}
       />
       <nav className="main-nav">
-        <div className="flex lg:hidden items-center">
+        <div className="flex md_mid:hidden items-center">
           <motion.button
             variants={menuToggler}
             initial="show"
@@ -142,7 +140,7 @@ export default function Navbar() {
             activeLink={activeLink}
           />
           <div
-            className="navlink-indicator hidden lg:block"
+            className="navlink-indicator hidden md_mid:block"
             ref={indicator}
           ></div>
         </ul>
@@ -193,19 +191,4 @@ export default function Navbar() {
       </motion.aside>
     </>
   )
-}
-
-{
-  /* <motion.button
-  whileHover={{ scale: 1.1 }}
-  transition={{ duration: 0.3, type: "spring" }}
-  className="landing-buttons-text bg-secondary text-primary py-2 px-4"
-  onClick={() => {
-    window.location.href = `mailto:${decodeURIComponent(
-      window.atob(encodeEmail(email))
-    )}`
-  }}
->
-  Let's Connect
-</motion.button> */
 }
