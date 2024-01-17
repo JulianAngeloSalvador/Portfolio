@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react"
 import ThemeToggler from "./ThemeToggler"
-import { StaticImage } from "gatsby-plugin-image"
 import Navlinks from "./Navlinks"
 import Socials from "./SocialLinks"
 import { motion } from "framer-motion"
+import Logo from "./Logo"
 
 const variants = {
   closed: {
@@ -64,6 +64,7 @@ export default function Navbar() {
   const [screen, setScreen] = useState("")
   // const email = process.env.GATSBY_CONTACT_EMAIL
   // const encodeEmail = email => window.btoa(email)
+  const [activeLink, setActiveLink] = useState(null)
   const indicator = useRef(null)
 
   const handleLinkIndicator = target => {
@@ -92,8 +93,6 @@ export default function Navbar() {
       setIsOpen(false)
     }
   }, [screen])
-
-  const [activeLink, setActiveLink] = useState(null)
 
   const handleActiveLink = index => {
     setActiveLink(index)
@@ -136,7 +135,7 @@ export default function Navbar() {
             ></motion.div>
           </motion.button>
         </div>
-        <ul className="navlink-container  gap-x-6 relative">
+        <ul className="navlink-container gap-x-6 relative">
           <Navlinks
             handleLinkIndicator={handleLinkIndicator}
             handleActiveLink={handleActiveLink}
@@ -149,13 +148,7 @@ export default function Navbar() {
         </ul>
         <header className="flex justify-center items-center">
           <a href="/">
-            <StaticImage
-              src="../images/Logo.png"
-              loading="eager"
-              formats={["auto", "webp", "avif"]}
-              alt="Portfolio Logo"
-              className="brand-logo"
-            />
+            <Logo />
           </a>
         </header>
 
