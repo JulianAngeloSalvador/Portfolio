@@ -44,7 +44,7 @@
 @layer components {
   /* Nav Component */
   .main-nav {
-    @apply bg-primary grid grid-cols-3 py-2 px-4 md:py-4 md:px-12 fixed top-0 left-0 w-full;
+    @apply bg-primary grid grid-cols-3 py-2 px-4 md:py-4 md:px-12 fixed top-0 left-0 w-full z-50;
   }
 
   .main-nav > * {
@@ -52,7 +52,7 @@
   }
 
   .navlink-container {
-    @apply hidden md_mid:flex items-center font-semibold;
+    @apply hidden md:flex items-center font-semibold;
   }
 
   .navlink-container .navlink {
@@ -82,7 +82,8 @@
 
   /* Landing Page */
   .landing-buttons {
-    @apply py-2 px-4 flex-grow font-semibold rounded-md max-w-[250px] sm_max:w-full;
+    @apply py-2 px-4 flex-grow font-semibold rounded-md w-full;
+    /* sm_max:w-full */
   }
 }
 
@@ -119,7 +120,18 @@
     /* font-weight: theme("fontWeight.semibold"); */
   }
 
+  .lead-content {
+    @apply text-base sm:text-2xl lg:text-lg 2xl:text-4xl;
+  }
+  .lead-content-md {
+    @apply text-sm md:text-xl 2xl:text-lg;
+  }
+
   /* Nav Component */
+  .main-nav {
+    background-color: theme("colors.primary_transparent");
+    backdrop-filter: blur(8px);
+  }
   .navlink-indicator {
     position: absolute;
     bottom: 0.35rem;
@@ -137,6 +149,34 @@
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
+  }
+
+  /* Landing Section  */
+  .display {
+    width: min(300px, 80%);
+    margin-inline: auto;
+    position: relative;
+  }
+
+  .image-display-container {
+    background-color: transparent;
+    padding-top: 1rem;
+    overflow: hidden;
+    border-radius: 0 0 100vw 100vw;
+  }
+
+  .clip {
+    background-color: theme("colors.secondary");
+    position: absolute;
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 4/4;
+    bottom: 0;
+    inset: auto 0 0;
+    margin-inline: auto;
+  }
+  .image-display {
+    position: relative;
   }
 }
 

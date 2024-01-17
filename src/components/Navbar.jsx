@@ -107,7 +107,7 @@ export default function Navbar() {
         onClick={() => setIsOpen(isOpen => !isOpen)}
       />
       <nav className="main-nav">
-        <div className="flex md_mid:hidden items-center">
+        <div className="flex md:hidden items-center">
           <motion.button
             variants={menuToggler}
             initial="show"
