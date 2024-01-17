@@ -124,7 +124,7 @@
     @apply text-base sm:text-2xl lg:text-lg 2xl:text-4xl;
   }
   .lead-content-md {
-    @apply text-sm md:text-xl 2xl:text-lg;
+    @apply text-base;
   }
 
   /* Nav Component */
@@ -153,9 +153,12 @@
 
   /* Landing Section  */
   .display {
-    width: min(300px, 80%);
+    width: min(400px, 80%);
     margin-inline: auto;
     position: relative;
+  }
+  .about-display-section {
+    box-shadow: inset 0 0 10px theme("colors.shadowClr");
   }
 
   .image-display-container {
@@ -166,7 +169,7 @@
   }
 
   .clip {
-    background-color: theme("colors.secondary");
+    background-color: theme("colors.tertiary");
     position: absolute;
     width: 100%;
     border-radius: 50%;
@@ -175,8 +178,20 @@
     inset: auto 0 0;
     margin-inline: auto;
   }
+
+  [data-theme="light"] .clip {
+    box-shadow: inset 5px 5px 10px #c7c7c7, inset -5px -5px 10px #efefef;
+  }
+  [data-theme="dark"] .clip {
+    box-shadow: inset -11px 11px 22px #202020, inset 11px -11px 22px #282828;
+  }
+
   .image-display {
     position: relative;
+    filter: drop-shadow(0 8px 5px theme("colors.secondary"));
+  }
+  [data-theme="dark"] .image-display {
+    filter: none;
   }
 }
 

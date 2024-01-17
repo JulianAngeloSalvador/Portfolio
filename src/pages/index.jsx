@@ -10,7 +10,7 @@ export default function Index() {
   // sm:text-6xl
   return (
     <Layout>
-      <section className="bg-primary h-dvh text-secondary flex flex-col items-center justify-center md:text-center text-left gap-y-4">
+      <section className="bg-primary h-dvh text-secondary flex flex-col items-center justify-center md:text-center text-left gap-y-4 shadow-shadowClr shadow-lg">
         <header className="w-fluid_80 sm:w-fluid 2xl:w-fluid_2xl">
           <h1 className="text-4xl 2xl:text-7xl font-bold font-revalia py-4">
             Julian Salvador
@@ -32,7 +32,7 @@ export default function Index() {
             // whileHover={{ scale: 1.1 }}
             // initial={{ scale: 1 }}
             // transition={{ duration: 0.3, type: "tween" }}
-            className="landing-buttons bg-secondary text-primary"
+            className="landing-buttons bg-secondary text-primary "
             onClick={() => {
               window.location.href = `mailto:${decodeURIComponent(
                 window.atob(encodeEmail(email))
@@ -47,41 +47,44 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="">
-        <div className="">
-          <article className="">
-            <p className="">
-              Hey there! <span className="inline-block">👋</span> My name is{" "}
-              <span className="highlighted">Julian</span>, a Web Developer
-              deeply devoted to crafting aesthetically pleasing, functional and
-              digital experiences that prioritize users.
-            </p>
-            <p className="">
-              In every project I take on, I'm all about achieving design
-              excellence. As a Web Developer, my journey is fueled by my passion
-              for constant learning and keeping up with the latest trends and
-              tech. This way, I can create visually captivating, user-friendly
-              solutions that adapt to ever-changing user demands.
-            </p>
-          </article>
-        </div>
-        <section className="">
-          <div className="">
-            <div className="">
-              <div className=""></div>
-              <div className="">
-                <StaticImage
-                  src="../images/temp_photo.png"
-                  alt="Julian Salvador"
-                  layout="constrained"
-                  formats={["auto", "avif", "webp"]}
-                  loading="eager"
-                  placeholder="dominantColor"
-                />
+      <section className="py-12 flex justify-center items-center bg-primary_transparent about-display-section">
+        <main className=" grid grid-cols-1 md:grid-cols-2 gap-y-10 items-center w-full sm:w-fluid_2xl ">
+          <div className="col-start-1 col-end-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3">
+            <article className="lead-content-md bg-primary outline outline-secondary outline-2 p-4 py-6 sm:rounded-md text-secondary flex flex-col gap-y-2 shadow-shadowClr shadow-lg">
+              <p className="">
+                Hey there! <span className="inline-block">👋</span> My name is{" "}
+                <span className="highlighted">Julian</span>, a Web Developer
+                deeply devoted to crafting aesthetically pleasing, functional
+                and digital experiences that prioritize users.
+              </p>
+              <p className="">
+                In every project I take on, I'm all about achieving design
+                excellence. As a Web Developer, my journey is fueled by my
+                passion for constant learning and keeping up with the latest
+                trends and tech. This way, I can create visually captivating,
+                user-friendly solutions that adapt to ever-changing user
+                demands.
+              </p>
+            </article>
+          </div>
+          <section className="">
+            <div className="display">
+              <div className="image-display-container">
+                <div className="clip outline outline-5 outline-tertiary"></div>
+                <div className="image-display">
+                  <StaticImage
+                    src="../images/temp_photo.png"
+                    alt="Julian Salvador"
+                    layout="constrained"
+                    formats={["auto", "avif", "webp"]}
+                    loading="eager"
+                    placeholder="dominantColor"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </main>
       </section>
       {/* <section className="guide1 p-8 grid lg:grid-cols-2 grid-cols-1 gap-4 items-center">
         <div className="flex lg:justify-center">
