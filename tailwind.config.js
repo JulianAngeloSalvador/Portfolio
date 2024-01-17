@@ -24,8 +24,9 @@ export default {
         xl_max: { max: "1279px" },
         lg_max: { max: "1023px" },
         md_max: { max: "767px" },
+        md_mid: { min: "800px" },
         sm_max: { max: "639px" },
-        xs_max_mid: { max: "360px" },
+        xs_max_mid: { max: "380px" },
         xs_max: { max: "280px" },
         ipad_lg: {
           raw: "only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (hover: none)",

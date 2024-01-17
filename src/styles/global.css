@@ -52,7 +52,7 @@
   }
 
   .navlink-container {
-    @apply hidden lg:flex items-center font-semibold;
+    @apply hidden md_mid:flex items-center font-semibold;
   }
 
   .navlink-container .navlink {
@@ -78,6 +78,11 @@
 
   .aside-nav .navlink.active {
     @apply text-primary font-bold before:opacity-100 before:md:-left-0  before:md:-translate-x-3 before:scale-x-100 md:pr-4 md:tracking-wide;
+  }
+
+  /* Landing Page */
+  .landing-buttons {
+    @apply py-2 px-4 flex-grow font-semibold rounded-md max-w-[250px] sm_max:w-full;
   }
 }
 
