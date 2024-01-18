@@ -89,8 +89,11 @@ export default function Navbar() {
   useEffect(() => {
     if (screen >= 1023) {
       setIsOpen(false)
+      document.body.style.overflow = "auto"
+    } else {
+      document.body.style.overflow = isOpen ? "hidden" : "auto"
     }
-  }, [screen])
+  }, [screen, isOpen])
 
   const handleActiveLink = index => {
     setActiveLink(index)
