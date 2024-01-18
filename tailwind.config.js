@@ -50,7 +50,9 @@ export default {
         github: "#29303d",
       },
       width: {
-        fluid_2xl: "min(900px, 80%)",
+        fluid_3xl: "min(1200px, 100%)",
+        fluid_2xl: "min(1100px, 100%)",
+        fluid_xl: "min(900px, 80%)",
         fluid: "min(700px, 80%)",
         fluid_80: "min(420px, 80%)",
         fluid_60: "min(320px, 80%)",

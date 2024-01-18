@@ -10,8 +10,9 @@ export default function Index() {
   // sm:text-6xl
   return (
     <Layout>
-      <section className="bg-primary h-dvh text-secondary flex flex-col items-center justify-center md:text-center text-left gap-y-4 shadow-shadowClr shadow-lg">
-        <header className="w-fluid_80 sm:w-fluid 2xl:w-fluid_2xl">
+      <section className="parallax-grid h-dvh text-secondary flex flex-col items-center justify-center md:text-center text-left gap-y-4 relative isolate">
+        <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
+        <header className="w-fluid_80 sm:w-fluid 2xl:w-fluid_xl">
           <h1 className="text-4xl 2xl:text-7xl font-bold font-revalia py-4">
             Julian Salvador
           </h1>
@@ -19,7 +20,7 @@ export default function Index() {
             I bring visionary concepts to life.
           </h2>
         </header>
-        <main className="lead-content sm:w-fluid w-fluid_80 md:w-fluid_80 2xl:w-fluid_2xl">
+        <main className="lead-content sm:w-fluid w-fluid_80 md:w-fluid_80 2xl:w-fluid_xl">
           <p className="text-fade">
             Crafting seamless user experiences with expertise in{" "}
             <span className="highlighted">front-end</span> web development, and
@@ -27,11 +28,12 @@ export default function Index() {
             <span className="highlighted">full-stack</span> capabilities.
           </p>
         </main>
-        <div className="text-xs md:text-xl w-fluid md:w-fluid_80 flex flex-col sm:flex-row items-center justify-center gap-4 py-4">
+        <div className="text-xs md:text-xl w-fluid md:w-fluid_80 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-8  py-4">
           <motion.button
-            // whileHover={{ scale: 1.1 }}
-            // initial={{ scale: 1 }}
-            // transition={{ duration: 0.3, type: "tween" }}
+            whileHover={{ scale: 1.1 }}
+            initial={{ scale: 1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ duration: 0.15, type: "tween" }}
             className="landing-buttons bg-secondary text-primary "
             onClick={() => {
               window.location.href = `mailto:${decodeURIComponent(
@@ -41,22 +43,38 @@ export default function Index() {
           >
             Let's Connect
           </motion.button>
-          <button className="landing-buttons outline outline-secondary outline-2">
+          <motion.button
+            className="landing-buttons outline outline-secondary outline-2"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{ scale: 1 }}
+            transition={{ duration: 0.15, type: "tween" }}
+          >
             Download CV
-          </button>
+          </motion.button>
         </div>
       </section>
 
-      <section className="py-12 flex justify-center items-center bg-primary_transparent about-display-section">
-        <main className=" grid grid-cols-1 md:grid-cols-2 gap-y-10 items-center w-full sm:w-fluid_2xl ">
-          <div className="col-start-1 col-end-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3">
-            <article className="lead-content-md bg-primary outline outline-secondary outline-2 p-4 py-6 sm:rounded-md text-secondary flex flex-col gap-y-2 shadow-shadowClr shadow-lg">
+      <section className="flex justify-center items-center bg-primary">
+        <main className="grid grid-cols-1 md:grid-cols-2 bg-tertiary w-fluid_2xl xl:w-[1400px]">
+          <div className="col-start-1 col-end-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3 bg-primary">
+            <article className="lead-content-md bg-primary p-8 pt-0 md:p-8 text-secondary flex flex-col gap-y-4 md:px-12 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30">
+              <h1 className="article-headline">About Me</h1>
               <p className="">
-                Hey there! <span className="inline-block">👋</span> My name is{" "}
+                Hey there! <span className="inline-block">👋</span> I'm{" "}
                 <span className="highlighted">Julian</span>, a Web Developer
-                deeply devoted to crafting aesthetically pleasing, functional
-                and digital experiences that prioritize users.
+                based in the Philippines, dedicated to crafting aesthetically
+                pleasing, functional, and user-centric digital experiences.
               </p>
+
+              <p>
+                My journey in web development began with the foundational trio
+                of HTML, CSS, and JavaScript. Subsequently, I further honed my
+                skills through an intensive 3-month Full-Stack Development
+                program at Zuitt Coding Bootcamp, where I received multiple
+                awards.
+              </p>
+
               <p className="">
                 In every project I take on, I'm all about achieving design
                 excellence. As a Web Developer, my journey is fueled by my
@@ -67,11 +85,10 @@ export default function Index() {
               </p>
             </article>
           </div>
-          <section className="">
-            <div className="display">
-              <div className="image-display-container">
-                <div className="clip outline outline-5 outline-tertiary"></div>
-                <div className="image-display">
+          <section className="bg-primary shadowed md:filter-none">
+            <div className="w-full h-full flex justify-center items-center">
+              <div className="rounded-full flex justify-center items-center w-fluid_80 aspect-square md:neumorph-outer relative -translate-y-16 md:translate-y-0 bg-primary ">
+                <div className="w-[92.5%] aspect-square rounded-full  overflow-hidden md:neumorph-inner bg-tertiary">
                   <StaticImage
                     src="../images/temp_photo.png"
                     alt="Julian Salvador"
@@ -79,6 +96,7 @@ export default function Index() {
                     formats={["auto", "avif", "webp"]}
                     loading="eager"
                     placeholder="dominantColor"
+                    style={{ bottom: "-.325rem", left: ".425rem" }}
                   />
                 </div>
               </div>
@@ -86,45 +104,6 @@ export default function Index() {
           </section>
         </main>
       </section>
-      {/* <section className="guide1 p-8 grid lg:grid-cols-2 grid-cols-1 gap-4 items-center">
-        <div className="flex lg:justify-center">
-          <article className="lead-content-md about-content text-secondary p-8 rounded-md shadow-md shadow-tertiary bg-primary w-full md:w-fluid">
-            <p className="">
-              Hey there! <span className="inline-block">👋</span> My name is{" "}
-              <span className="highlighted">Julian</span>, a Web Developer
-              deeply devoted to crafting aesthetically pleasing, functional and
-              digital experiences that prioritize users.
-            </p>
-            <p className="">
-              In every project I take on, I'm all about achieving design
-              excellence. As a Web Developer, my journey is fueled by my passion
-              for constant learning and keeping up with the latest trends and
-              tech. This way, I can create visually captivating, user-friendly
-              solutions that adapt to ever-changing user demands.
-            </p>
-          </article>
-        </div>
-        <section className="guide2 row-start-1 row-end-2">
-          <div className="display w-fluid_40 md_max:w-56 md:w-80">
-            <div className="image-display-container">
-              <div className="clip">
-                <div className="rounded-full w-full h-full"></div>
-              </div>
-              <div className="image-display">
-                <StaticImage
-                  src="../images/temp_photo.png"
-                  alt="Julian Salvador"
-                  layout="constrained"
-                  formats={["auto", "avif", "webp"]}
-                  loading="eager"
-                  placeholder="dominantColor"
-                  blurredOptions={5}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </section> */}
     </Layout>
   )
 }
