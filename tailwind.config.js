@@ -1,3 +1,5 @@
+import theme from "tailwindcss/defaultTheme"
+
 /** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin")
 const defaultTheme = require("tailwindcss/defaultTheme")
@@ -42,7 +44,7 @@ export default {
       boxShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
         DEFAULT: "0 2px 4px var(--tw-shadow-color)",
-        lg: "0 8px 16px var(--tw-shadow-color)",
+        lg: "0 10px 16px var(--tw-shadow-color)",
       },
       colors: {
         facebook: "#0A66FF",
@@ -58,12 +60,19 @@ export default {
         fluid_60: "min(320px, 80%)",
         fluid_40: "min(220px, 80%)",
       },
+      textShadow: {
+        sm: "0 1px 2px var(--tw-shadow-color)",
+        DEFAULT: "0 2px 4px var(--tw-shadow-color)",
+        lg: "0 8px 16px var(--tw-shadow-color)",
+      },
     },
   },
+
   plugins: [
-    plugin(function ({ addVariant }) {
+    plugin(function ({ addVariant, matchUtilities, theme }) {
       addVariant("hocus", ["&:hover", "&:focus"])
     }),
+
     createThemes({
       dark: {
         primary: "#202020",
@@ -71,7 +80,8 @@ export default {
         tertiary: "#242424",
         fade: "#9a9a9a",
         shadowClr: "#181818",
-        highlight: "#A8DADC",
+        highlight: "#99dee0",
+        interact: "#A8DADC",
         primary_transparent: "rgba(32, 32, 32, 0.75)",
       },
       light: {
@@ -80,7 +90,8 @@ export default {
         tertiary: "#DBDBDB",
         fade: "#505050",
         shadowClr: "#aeaeae",
-        highlight: "#457B9D",
+        highlight: "#455c9d",
+        interact: "#457B9D",
         primary_transparent: "rgba(237, 237, 237, 0.75)",
       },
     }),

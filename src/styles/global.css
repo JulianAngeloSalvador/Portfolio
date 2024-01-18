@@ -123,10 +123,10 @@
   /* Typography */
 
   .highlighted {
-    color: theme("colors.highlight");
+    @apply text-highlight hover:text-interact;
   }
   .lead-content {
-    @apply text-base sm:text-2xl lg:text-lg 2xl:text-4xl;
+    @apply text-base sm:text-2xl lg:text-lg xl:text-2xl;
   }
   .lead-content-md {
     @apply text-base;
@@ -230,6 +230,14 @@
   .shadowed {
     filter: drop-shadow(0px -2px 12px theme("colors.shadowClr"));
   }
+
+  [data-theme="light"] .image-shadow {
+    filter: drop-shadow(0 8px 10px theme("colors.fade"));
+  }
+
+  [data-theme="dark"] .image-shadow {
+    filter: none;
+  }
 }
 
 @layer base {
@@ -241,5 +249,16 @@
   }
   body {
     font-family: theme("fontFamily.raleway");
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[7px];
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-tertiary;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary rounded-full;
   }
 }

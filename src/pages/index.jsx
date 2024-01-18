@@ -22,10 +22,9 @@ export default function Index() {
         </header>
         <main className="lead-content sm:w-fluid w-fluid_80 md:w-fluid_80 2xl:w-fluid_xl">
           <p className="text-fade">
-            Crafting seamless user experiences with expertise in{" "}
-            <span className="highlighted">front-end</span> web development, and
-            a versatile skill set spanning{" "}
-            <span className="highlighted">full-stack</span> capabilities.
+            Crafting seamless user experiences with expertise in front-end web
+            development, and a versatile skill set spanning full-stack
+            capabilities.
           </p>
         </main>
         <div className="text-xs md:text-xl w-fluid md:w-fluid_80 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-8  py-4">
@@ -34,7 +33,7 @@ export default function Index() {
             initial={{ scale: 1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.15, type: "tween" }}
-            className="landing-buttons bg-secondary text-primary "
+            className="landing-buttons bg-secondary text-primary shadow-shadowClr shadow-md md:shadow-lg"
             onClick={() => {
               window.location.href = `mailto:${decodeURIComponent(
                 window.atob(encodeEmail(email))
@@ -44,7 +43,7 @@ export default function Index() {
             Let's Connect
           </motion.button>
           <motion.button
-            className="landing-buttons outline outline-secondary outline-2"
+            className="landing-buttons bg-primary outline outline-secondary outline-2 shadow-shadowClr shadow-md md:shadow-lg"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ scale: 1 }}
@@ -58,21 +57,30 @@ export default function Index() {
       <section className="flex justify-center items-center bg-primary">
         <main className="grid grid-cols-1 md:grid-cols-2 bg-tertiary w-fluid_2xl xl:w-[1400px]">
           <div className="col-start-1 col-end-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3 bg-primary">
-            <article className="lead-content-md bg-primary p-8 pt-0 md:p-8 text-secondary flex flex-col gap-y-4 md:px-12 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30">
-              <h1 className="article-headline">About Me</h1>
+            <article className="lead-content-md bg-primary p-8 pt-0 sm:px-20 md:p-8 text-fade flex flex-col gap-y-4 md:px-12 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30">
+              <h1 className="article-headline text-secondary">About Me</h1>
               <p className="">
-                Hey there! <span className="inline-block">👋</span> I'm{" "}
-                <span className="highlighted">Julian</span>, a Web Developer
-                based in the Philippines, dedicated to crafting aesthetically
-                pleasing, functional, and user-centric digital experiences.
+                Hey there! <span className="inline-block">👋</span> I'm Julian,
+                a Web Developer based in the Philippines, dedicated to crafting
+                aesthetically pleasing, functional, and user-centric digital
+                experiences.
               </p>
-
               <p>
                 My journey in web development began with the foundational trio
                 of HTML, CSS, and JavaScript. Subsequently, I further honed my
                 skills through an intensive 3-month Full-Stack Development
-                program at Zuitt Coding Bootcamp, where I received multiple
-                awards.
+                program at{" "}
+                <a
+                  href="https://zuitt.co/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Visit Zuitt Coding Bootcamp"
+                  title="Visit Zuitt Coding Bootcamp"
+                  className="highlighted"
+                >
+                  Zuitt Coding Bootcamp
+                </a>
+                , where I received multiple awards.
               </p>
 
               <p className="">
@@ -88,7 +96,7 @@ export default function Index() {
           <section className="bg-primary shadowed md:filter-none">
             <div className="w-full h-full flex justify-center items-center">
               <div className="rounded-full flex justify-center items-center w-fluid_80 aspect-square md:neumorph-outer relative -translate-y-16 md:translate-y-0 bg-primary ">
-                <div className="w-[92.5%] aspect-square rounded-full  overflow-hidden md:neumorph-inner bg-tertiary">
+                <div className="w-[92.5%] aspect-square rounded-full  overflow-hidden md:neumorph-inner bg-tertiary ">
                   <StaticImage
                     src="../images/temp_photo.png"
                     alt="Julian Salvador"
@@ -97,6 +105,7 @@ export default function Index() {
                     loading="eager"
                     placeholder="dominantColor"
                     style={{ bottom: "-.325rem", left: ".425rem" }}
+                    class="image-shadow"
                   />
                 </div>
               </div>
