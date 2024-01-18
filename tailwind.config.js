@@ -50,6 +50,31 @@ export default {
         facebook: "#0A66FF",
         linkedin: "#0A66C2",
         github: "#29303d",
+        htmlStart: "#E44D26",
+        htmlEnd: "#F16529",
+        cssStart: "#214CE5",
+        cssEnd: "#2465F1",
+        js: "#F3DD55",
+        node1: "#569D4B",
+        node2: "#6BC045",
+        node3: "#3C873A",
+        mongo1: "#001E2B",
+        mongo2: "#27FF82",
+        react: "#61DBFB",
+        bootstrap1: "#8A12FB",
+        bootstrap2: "#7811F7",
+        tailwind: "#38BDF8",
+        gsap1: "#0AE04F",
+        gsap2: "#74EF84",
+        figma1: "#EA4C1D",
+        figma2: "#F76E5F",
+        figma3: "#9D56F7",
+        figma4: "#19B6F6",
+        figma5: "#0AC97F",
+        illustrator1: "#310000",
+        illustrator2: "#F79500",
+        blender1: "#F69455",
+        blender2: "#3E76A2",
       },
       width: {
         fluid_3xl: "min(1200px, 100%)",
@@ -69,7 +94,7 @@ export default {
   },
 
   plugins: [
-    plugin(function ({ addVariant, matchUtilities, theme }) {
+    plugin(function ({ addVariant }) {
       addVariant("hocus", ["&:hover", "&:focus"])
     }),
 

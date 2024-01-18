@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { motion } from "framer-motion"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
+import Stack from "../sections/Stack"
 
 export default function Index() {
   const email = process.env.GATSBY_CONTACT_EMAIL
@@ -113,6 +114,7 @@ export default function Index() {
           </section>
         </main>
       </section>
+      <Stack />
     </Layout>
   )
 }
