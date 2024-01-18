@@ -93,7 +93,7 @@ export default function Index() {
               </p>
             </article>
           </div>
-          <section className="bg-primary shadowed md:filter-none">
+          <section className="bg-primary shadowed md:filter-none" id="about">
             <div className="w-full h-full flex justify-center items-center">
               <div className="rounded-full flex justify-center items-center w-fluid_80 aspect-square md:neumorph-outer relative -translate-y-16 md:translate-y-0 bg-primary ">
                 <div className="w-[92.5%] aspect-square rounded-full  overflow-hidden md:neumorph-inner bg-tertiary ">
