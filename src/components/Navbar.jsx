@@ -114,11 +114,11 @@ export default function Navbar() {
       prevScroll = currentScroll
 
       if (currentScroll < 650) {
-        scrollerTop.current.classList.add("opacity-0", "translate-y-full")
-        scrollerTop.current.classList.remove("opacity-50", "translate-y-0")
+        scrollerTop.current.classList.add("opacity-0", "-bottom-full")
+        scrollerTop.current.classList.remove("opacity-50", "bottom-3")
       } else {
-        scrollerTop.current.classList.add("opacity-50", "translate-y-0")
-        scrollerTop.current.classList.remove("opacity-0", "translate-y-full")
+        scrollerTop.current.classList.add("opacity-50", "bottom-3")
+        scrollerTop.current.classList.remove("opacity-0", "-bottom-full")
       }
     }
 
@@ -242,7 +242,7 @@ export default function Navbar() {
       <button
         onClick={scrollToTop}
         ref={scrollerTop}
-        className={`fixed right-3 bottom-3 z-[80]  w-8 aspect-square opacity-0 translate-y-full text-secondary rounded-full outline outline-secondary outline-2 grid place-items-center transition-all duration-[.3s] ease-in-out hover:opacity-100 hover:bg-primary`}
+        className={`fixed right-3 -bottom-full z-[80]  w-8 aspect-square opacity-0 text-secondary rounded-full outline outline-secondary outline-2 grid place-items-center transition-all duration-[.75s] ease-in-out hover:opacity-100 hover:bg-primary`}
       >
         <FaArrowUp
           style={{ width: "100%", height: "100%", padding: ".5rem" }}
