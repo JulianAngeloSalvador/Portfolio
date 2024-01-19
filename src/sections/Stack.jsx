@@ -22,13 +22,14 @@ export default function Stack() {
     "Blender",
   ]
 
-  const content = stacks
-    .concat(tools)
-    .map(tech => (
-      <div className="outline outline-secondary outline-2 rounded-full py-2 px-4 text-secondary bg-primary font-semibold min-w-18 xs_max:flex-grow  text-center">
-        {tech}
-      </div>
-    ))
+  const content = stacks.concat(tools).map(tech => (
+    <div
+      key={tech}
+      className="outline outline-secondary outline-2 rounded-full py-2 px-4 text-secondary bg-primary font-semibold min-w-18 xs_max:flex-grow  text-center"
+    >
+      {tech}
+    </div>
+  ))
 
   return (
     <section
