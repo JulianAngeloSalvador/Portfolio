@@ -55,7 +55,10 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="flex justify-center items-center bg-primary">
+      <section
+        className="flex justify-center min-h-dvh items-center bg-primary"
+        id="about"
+      >
         <main className="grid grid-cols-1 md:grid-cols-2 bg-tertiary w-fluid_2xl xl:w-[1400px]">
           <div className="col-start-1 col-end-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3 bg-primary">
             <article className="lead-content-md bg-primary p-8 pt-0 sm:px-20 md:p-8 text-fade flex flex-col gap-y-4 md:px-12 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30">
@@ -94,7 +97,7 @@ export default function Index() {
               </p>
             </article>
           </div>
-          <section className="bg-primary shadowed md:filter-none" id="about">
+          <section className="bg-primary shadowed md:filter-none">
             <div className="w-full h-full flex justify-center items-center">
               <div className="rounded-full flex justify-center items-center w-fluid_80 aspect-square md:neumorph-outer relative -translate-y-16 md:translate-y-0 bg-primary ">
                 <div className="w-[92.5%] aspect-square rounded-full  overflow-hidden md:neumorph-inner bg-tertiary ">
