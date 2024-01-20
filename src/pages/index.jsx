@@ -56,9 +56,10 @@ export default function Index() {
       </section>
 
       <section
-        className="flex justify-center min-h-dvh items-center bg-primary"
+        className="flex justify-center min-h-dvh items-center parallax-grid relative isolate"
         id="about"
       >
+        <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
         <main className="grid grid-cols-1 md:grid-cols-2 bg-tertiary w-fluid_2xl xl:w-[1400px]">
           <div className="col-start-1 col-end-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3 bg-primary">
             <article className="lead-content-md bg-primary p-8 pt-0 sm:px-20 md:p-8 text-fade flex flex-col gap-y-4 md:px-12 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30">

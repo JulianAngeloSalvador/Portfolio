@@ -29,16 +29,18 @@ export default {
         // sm_max: { max: "639px" },
         // xs_max_mid: { max: "380px" },
         // xs_max: { max: "280px" },
-        // ipad_lg: {
-        //   raw: "only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (hover: none)",
-        // },
+        //
         // tall: { raw: "(min-height: 800px)" },
         sm: "530px",
         sm_mid: { min: "700px" },
         md: "800px",
+        sm_less: { max: "389px" },
         xs_max: { max: "350px" },
         ipad_air: {
           raw: "only screen and (min-width: 820px) and (max-height: 1200px)",
+        },
+        ipad_lg: {
+          raw: "only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (hover: none)",
         },
       },
       boxShadow: {
@@ -47,6 +49,7 @@ export default {
         lg: "0 10px 16px var(--tw-shadow-color)",
       },
       colors: {
+        darkTertiary: "#242424",
         facebook: "#0A66FF",
         linkedin: "#0A66C2",
         github: "#29303d",
@@ -84,6 +87,7 @@ export default {
         fluid_80: "min(420px, 80%)",
         fluid_60: "min(320px, 80%)",
         fluid_40: "min(220px, 80%)",
+        fluid_object: "min(350px, 80%)",
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
