@@ -26,16 +26,14 @@ export default function Socials() {
 
         switch (link.social) {
           case "facebook":
-            social_icon = <FaFacebookF style={{ fontSize: "1.25rem" }} />
+            social_icon = <FaFacebookF style={{ fontSize: "1.5rem" }} />
             break
           case "linkedin":
-            social_icon = <FaLinkedinIn style={{ fontSize: "1.25rem" }} />
+            social_icon = <FaLinkedinIn style={{ fontSize: "1.5rem" }} />
 
             break
           case "github":
-            social_icon = (
-              <TbBrandGithubFilled style={{ fontSize: "1.25rem" }} />
-            )
+            social_icon = <TbBrandGithubFilled style={{ fontSize: "1.5rem" }} />
 
             break
           default:

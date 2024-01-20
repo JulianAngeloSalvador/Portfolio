@@ -28,15 +28,17 @@ export default function Index() {
     <Layout>
       <section className="parallax-grid h-dvh text-secondary flex flex-col items-center justify-center md:text-center text-left gap-y-4 relative isolate">
         <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
-        <header className="w-fluid_80 sm:w-fluid 2xl:w-fluid_xl">
-          <h1 className="text-4xl 2xl:text-7xl font-bold font-revalia py-4 ipad_lg:text-6xl">
+        <header className="w-fluid_80 sm:w-fluid_xl 2xl:w-fluid_xl">
+          <h1 className="font-bold font-revalia py-4 landing-headline">
             Julian Salvador
           </h1>
-          <h2 className="xs_max:text-2xl text-4xl 2xl:text-6xl text-fade font-semibold">
+
+          <h2 className="font-semibold text-fade landing-subheadline">
             I bring visionary concepts to life.
           </h2>
         </header>
-        <main className="lead-content sm:w-fluid w-fluid_80 md:w-fluid_80 ipad_lg:w-fluid_xl 2xl:w-fluid_xl">
+
+        <main className="lead-content w-fluid_80 sm:w-fluid_xl 2xl:w-fluid_xl">
           <p className="text-fade">
             Crafting seamless user experiences with expertise in front-end web
             development, and a versatile skill set spanning full-stack
@@ -49,7 +51,7 @@ export default function Index() {
             initial={{ scale: 1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.15, type: "tween" }}
-            className="landing-buttons bg-secondary text-primary shadow-shadowClr shadow-md md:shadow-lg"
+            className="landing-buttons bg-secondary text-primary shadow-shadowClr shadow-md md:shadow-lg normal-fs"
             onClick={() => {
               window.location.href = `mailto:${decodeURIComponent(
                 window.atob(encodeEmail(email))
@@ -59,7 +61,7 @@ export default function Index() {
             Let's Connect
           </motion.button>
           <motion.button
-            className="landing-buttons bg-primary outline outline-secondary outline-2 shadow-shadowClr shadow-md md:shadow-lg"
+            className="landing-buttons bg-primary outline outline-secondary outline-2 shadow-shadowClr shadow-md md:shadow-lg normal-fs"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ scale: 1 }}
