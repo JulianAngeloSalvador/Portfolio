@@ -42,7 +42,7 @@ export default function Stack() {
   const content = stacks.concat(tools).map(tech => (
     <div
       key={tech}
-      className="outline outline-secondary outline-2 rounded-full py-2 px-4 text-secondary bg-primary font-semibold sm_less:flex-grow text-center xs_max:text-base text-lg ipad_lg:text-2xl 2xl:text-2xl 2xl:py-4 2xl:px-6"
+      className="outline outline-secondary outline-2 rounded-full py-2 px-4 text-secondary bg-primary font-semibold sm_less:flex-grow text-center normal-fs 2xl:py-4 2xl:px-6"
     >
       {tech}
     </div>
@@ -61,37 +61,41 @@ export default function Stack() {
       {/********/}
 
       <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
-      <section className="w-full sm_less:flex-grow-0 sm_less:py-8 flex-grow flex flex-col justify-center">
-        <h1 className="section-headline text-center text-secondary xl:text-8xl">
+      <section className="w-full sm_less:flex-grow-0 flex-grow flex flex-col justify-center">
+        <h1 className="article-headline text-center text-secondary py-4">
           Stack and Tools
         </h1>
 
-        <main className="w-full sm_mid:w-fluid_xl ipad_lg:w-fluid flex flex-wrap justify-center gap-4 mx-auto p-6">
+        <main className="w-full sm_mid:w-fluid_xl ipad_lg:w-fluid flex flex-wrap justify-center gap-4 mx-auto px-6">
           {content}
         </main>
       </section>
-      <section className="relative bottom-0 left-0 w-fluid_90 flex-grow">
-        <div className="mug-container">
-          <div className="mug">
-            <div
-              className={`mug-handle ${screen > 380 ? "-left-2" : "-right-2"}`}
-            />
+      {screen > 220 && (
+        <section className="relative bottom-0 left-0 w-fluid_90 flex-grow">
+          <div className="mug-container">
+            <div className="mug">
+              <div
+                className={`mug-handle ${
+                  screen > 380 ? "-left-2" : "-right-2"
+                }`}
+              />
+            </div>
           </div>
-        </div>
-        {screen > 350 && (
-          <div className="desktop-container">
-            <Desktop />
-          </div>
-        )}
+          {screen > 350 && (
+            <div className="desktop-container">
+              <Desktop />
+            </div>
+          )}
 
-        <div
-          className={`laptop-container ${
-            screen > 350 ? "right-0" : "left-1/2 -translate-x-1/2"
-          }`}
-        >
-          <Laptop />
-        </div>
-      </section>
+          <div
+            className={`laptop-container ${
+              screen > 350 ? "right-0" : "left-1/2 -translate-x-1/2"
+            }`}
+          >
+            <Laptop />
+          </div>
+        </section>
+      )}
     </section>
   )
 }

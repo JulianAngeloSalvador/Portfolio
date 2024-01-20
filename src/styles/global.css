@@ -95,7 +95,8 @@
     --landing-subheadline: clamp(1.85rem, 3vw + 1rem, 3rem);
     --lead-content: clamp(1rem, 1.25vw + 1rem, 1.75rem);
     --normal-fs: clamp(1rem, 2vw + 1rem, 1.1rem);
-    --article-headline: clamp(1.5rem, 2vw + 1rem, 2rem);
+    --article-headline: clamp(2rem, 2vw + 1rem, 3rem);
+    --section-headline: clamp(2rem, 3vw + 1rem, 4rem);
   }
   .landing-headline {
     font-size: var(--landing-headline);
@@ -110,6 +111,10 @@
     font-size: var(--article-headline);
   }
 
+  .section-headline {
+    font-size: var(--section-headline);
+  }
+
   .lead-content {
     font-size: var(--lead-content);
     line-height: var(--normal-spacing);
@@ -119,10 +124,6 @@
   }
   .highlighted {
     @apply text-highlight hover:text-interact;
-  }
-
-  .section-headline {
-    @apply xs_max:text-2xl text-3xl sm_mid:text-5xl ipad_lg:text-7xl;
   }
 
   .guide1 {
