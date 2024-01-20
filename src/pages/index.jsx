@@ -14,14 +14,14 @@ export default function Index() {
       <section className="parallax-grid h-dvh text-secondary flex flex-col items-center justify-center md:text-center text-left gap-y-4 relative isolate">
         <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
         <header className="w-fluid_80 sm:w-fluid 2xl:w-fluid_xl">
-          <h1 className="text-4xl 2xl:text-7xl font-bold font-revalia py-4">
+          <h1 className="text-4xl ipad_lg:text-6xl 2xl:text-7xl font-bold font-revalia py-4">
             Julian Salvador
           </h1>
           <h2 className="xs_max:text-2xl text-4xl 2xl:text-6xl text-fade font-semibold">
             I bring visionary concepts to life.
           </h2>
         </header>
-        <main className="lead-content sm:w-fluid w-fluid_80 md:w-fluid_80 2xl:w-fluid_xl">
+        <main className="lead-content sm:w-fluid w-fluid_80 md:w-fluid_80 ipad_lg:w-fluid 2xl:w-fluid_xl">
           <p className="text-fade">
             Crafting seamless user experiences with expertise in front-end web
             development, and a versatile skill set spanning full-stack
@@ -56,11 +56,11 @@ export default function Index() {
       </section>
 
       <section
-        className="flex justify-center min-h-dvh items-center bg-primary"
+        className="flex justify-center min-h-dvh ipad_lg:min-h-0 items-center bg-primary ipad_lg:py-8"
         id="about"
       >
-        <main className="grid grid-cols-1 md:grid-cols-2 bg-tertiary w-fluid_2xl xl:w-[1400px]">
-          <div className="col-start-1 col-end-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3 bg-primary">
+        <main className="grid grid-cols-1 ipad_lg:grid-cols-1 md:grid-cols-2 bg-tertiary w-fluid_2xl xl:w-[1400px]">
+          <div className="col-start-1 col-end-2 ipad_lg:row-start-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3 bg-primary">
             <article className="lead-content-md bg-primary p-8 pt-0 sm:px-20 md:p-8 text-fade flex flex-col gap-y-4 md:px-12 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30">
               <h1 className="article-headline text-secondary py-2">About Me</h1>
               <p className="">
