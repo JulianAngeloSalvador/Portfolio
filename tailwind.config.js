@@ -32,6 +32,7 @@ export default {
         //
         // tall: { raw: "(min-height: 800px)" },
         sm: "530px",
+        sm_max: { max: "600px" },
         sm_mid: { min: "700px" },
         md: "800px",
         sm_less: { max: "389px" },

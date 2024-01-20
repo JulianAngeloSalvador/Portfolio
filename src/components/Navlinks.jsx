@@ -34,7 +34,11 @@ export default function Navlinks({
               handleActiveLink(index)
               handleLinkIndicator(e.target)
             }}
-            className={activeLink === index ? "navlink active" : "navlink"}
+            className={
+              activeLink === index
+                ? "normal-fs navlink active"
+                : "normal-fs navlink"
+            }
           >
             {link.title}
           </a>

@@ -75,7 +75,7 @@ export default function Index() {
       <section
         className={`flex justify-center min-h-dvh items-center ${
           screen > 1390 ? "bg-primary" : "parallax-grid"
-        } relative isolate`}
+        } relative isolate sm_max:mt-16`}
         id="about"
       >
         <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
