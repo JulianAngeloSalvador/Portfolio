@@ -82,19 +82,20 @@
 
   /* Landing Page */
   .landing-buttons {
-    @apply py-2 px-4 flex-grow font-semibold rounded-md w-full;
+    @apply py-2 px-3 flex-grow font-semibold rounded-md w-full;
   }
 }
 
 @layer utilities {
   /* Typography */
   :root {
-    --landing-headline: clamp(2rem, 6vw + 1rem, 4.5rem);
-    --landing-subheadline: clamp(1.85rem, 3vw + 1rem, 3rem);
     --subheadline-spacing: 1;
     --normal-spacing: 1.3;
-    --lead-content: clamp(1rem, 1.5vw + 1rem, 2rem);
-    --normal-fs: clamp(1rem, 1vw + 0.5rem, 1.5rem);
+    --landing-headline: clamp(2rem, 6vw + 1rem, 4.5rem);
+    --landing-subheadline: clamp(1.85rem, 3vw + 1rem, 3rem);
+    --lead-content: clamp(1rem, 1.25vw + 1rem, 1.75rem);
+    --normal-fs: clamp(1rem, 2vw + 1rem, 1.1rem);
+    --article-headline: clamp(1.5rem, 2vw + 1rem, 2rem);
   }
   .landing-headline {
     font-size: var(--landing-headline);
@@ -103,6 +104,10 @@
   .landing-subheadline {
     font-size: var(--landing-subheadline);
     line-height: var(--subheadline-spacing);
+  }
+
+  .article-headline {
+    font-size: var(--article-headline);
   }
 
   .lead-content {
@@ -114,16 +119,6 @@
   }
   .highlighted {
     @apply text-highlight hover:text-interact;
-  }
-  /* .lead-content {
-    @apply text-base sm:text-2xl lg:text-lg xl:text-2xl ipad_lg:text-3xl;
-  } */
-  .lead-content-md {
-    @apply text-base sm_mid:text-xl ipad_lg:text-2xl;
-  }
-
-  .article-headline {
-    @apply text-2xl py-2 sm_mid:text-5xl sm_mid:py-4;
   }
 
   .section-headline {

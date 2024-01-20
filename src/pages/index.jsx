@@ -26,7 +26,7 @@ export default function Index() {
   const encodeEmail = email => window.btoa(email)
   return (
     <Layout>
-      <section className="parallax-grid h-dvh text-secondary flex flex-col items-center justify-center md:text-center text-left gap-y-4 relative isolate">
+      <section className="parallax-grid min-h-dvh text-secondary flex flex-col items-center justify-center md:text-center text-left gap-y-4 relative isolate">
         <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
         <header className="w-fluid_80 sm:w-fluid_xl 2xl:w-fluid_xl">
           <h1 className="font-bold font-revalia py-4 landing-headline">
@@ -82,12 +82,12 @@ export default function Index() {
         <main className="grid grid-cols-1 md:grid-cols-2 bg-tertiary w-fluid_2xl xl:w-[1400px]">
           <div
             className={`col-start-1 col-end-2 ${
-              screen >= 800 && screen < 1400
+              screen >= 800 && screen < 1350
                 ? "col-start-1 col-end-3 row-start-2 row-end-3"
                 : "md:row-start-1 md:row-end-2 row-start-2 row-end-3"
             } bg-primary`}
           >
-            <article className="lead-content-md bg-primary p-8 pt-0 sm:px-20 md:p-8 md:pb-16 text-fade flex flex-col gap-y-4 md:px-12 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30">
+            <article className="normal-fs bg-primary p-8 pt-0 sm:px-20 md:p-8 md:pb-16 text-fade flex flex-col gap-y-4 md:px-32 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30 w-fluid_2xl mx-auto">
               <h1 className="article-headline text-secondary py-2">About Me</h1>
               <p className="">
                 Hey there! <span className="inline-block">👋</span> I'm Julian,
@@ -125,7 +125,7 @@ export default function Index() {
           </div>
           <section
             className={`bg-primary shadowed md:filter-none w-full ${
-              screen >= 800 && screen < 1400 ? "col-start-1 col-end-3 pt-6" : ""
+              screen >= 800 && screen < 1350 ? "col-start-1 col-end-3 pt-6" : ""
             }`}
           >
             <div className="w-full h-full flex justify-center items-center">
