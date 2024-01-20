@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import { motion } from "framer-motion"
 import Layout from "../components/Layout"
@@ -6,9 +6,24 @@ import { StaticImage } from "gatsby-plugin-image"
 import Stack from "../sections/Stack"
 
 export default function Index() {
+  const [screen, setScreen] = useState("")
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreen(window.innerWidth)
+    }
+
+    handleResize()
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
+
   const email = process.env.GATSBY_CONTACT_EMAIL
   const encodeEmail = email => window.btoa(email)
-  // sm:text-6xl
   return (
     <Layout>
       <section className="parallax-grid h-dvh text-secondary flex flex-col items-center justify-center md:text-center text-left gap-y-4 relative isolate">
@@ -56,12 +71,20 @@ export default function Index() {
       </section>
 
       <section
-        className="flex justify-center min-h-dvh items-center parallax-grid relative isolate"
+        className={`flex justify-center min-h-dvh items-center ${
+          screen > 1390 ? "bg-primary" : "parallax-grid"
+        } relative isolate`}
         id="about"
       >
         <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
         <main className="grid grid-cols-1 md:grid-cols-2 bg-tertiary w-fluid_2xl xl:w-[1400px]">
-          <div className="col-start-1 col-end-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3 bg-primary">
+          <div
+            className={`col-start-1 col-end-2 ${
+              screen >= 800 && screen < 1400
+                ? "col-start-1 col-end-3 row-start-2 row-end-3"
+                : "md:row-start-1 md:row-end-2 row-start-2 row-end-3"
+            } bg-primary`}
+          >
             <article className="lead-content-md bg-primary p-8 pt-0 sm:px-20 md:p-8 text-fade flex flex-col gap-y-4 md:px-12 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30">
               <h1 className="article-headline text-secondary py-2">About Me</h1>
               <p className="">
@@ -98,7 +121,11 @@ export default function Index() {
               </p>
             </article>
           </div>
-          <section className="bg-primary shadowed md:filter-none">
+          <section
+            className={`bg-primary shadowed md:filter-none w-full ${
+              screen >= 800 && screen < 1400 ? "col-start-1 col-end-3 pt-4" : ""
+            }`}
+          >
             <div className="w-full h-full flex justify-center items-center">
               <div className="rounded-full flex justify-center items-center w-fluid_80 aspect-square md:neumorph-outer relative -translate-y-16 md:translate-y-0 bg-primary ">
                 <div className="w-[92.5%] aspect-square rounded-full  overflow-hidden md:neumorph-inner bg-tertiary ">

@@ -129,7 +129,7 @@
     @apply text-base sm:text-2xl lg:text-lg xl:text-2xl;
   }
   .lead-content-md {
-    @apply text-base;
+    @apply text-base sm_mid:text-xl;
   }
 
   .article-headline {

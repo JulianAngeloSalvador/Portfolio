@@ -22,8 +22,8 @@ export default {
       },
       screens: {
         // "3xl": { min: "2500px" },
-        // "2xl_max": { max: "1535px" },
-        // xl_max: { max: "1279px" },
+        "2xl": "1390px",
+        xl_max: { max: "1279px" },
         // lg_max: { max: "1023px" },
         // md: { min: "800px" },
         // sm_max: { max: "639px" },
