@@ -50,6 +50,8 @@ export default {
       },
       colors: {
         darkTertiary: "#242424",
+        darkObject: "#303030",
+        lightTertiary: "#DBDBDB",
         facebook: "#0A66FF",
         linkedin: "#0A66C2",
         github: "#29303d",
@@ -84,10 +86,12 @@ export default {
         fluid_2xl: "min(1100px, 100%)",
         fluid_xl: "min(900px, 80%)",
         fluid: "min(700px, 80%)",
+        fluid_90: "min(600px, 100%)",
         fluid_80: "min(420px, 80%)",
         fluid_60: "min(320px, 80%)",
         fluid_40: "min(220px, 80%)",
-        fluid_object: "min(350px, 80%)",
+        fluid_desktop: "min(350px, 80%)",
+        fluid_laptop: "min(250px, 50%)",
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",

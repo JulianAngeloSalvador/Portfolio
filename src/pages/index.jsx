@@ -85,7 +85,7 @@ export default function Index() {
                 : "md:row-start-1 md:row-end-2 row-start-2 row-end-3"
             } bg-primary`}
           >
-            <article className="lead-content-md bg-primary p-8 pt-0 sm:px-20 md:p-8 text-fade flex flex-col gap-y-4 md:px-12 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30">
+            <article className="lead-content-md bg-primary p-8 pt-0 sm:px-20 md:p-8 md:pb-16 text-fade flex flex-col gap-y-4 md:px-12 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30">
               <h1 className="article-headline text-secondary py-2">About Me</h1>
               <p className="">
                 Hey there! <span className="inline-block">👋</span> I'm Julian,
@@ -123,7 +123,7 @@ export default function Index() {
           </div>
           <section
             className={`bg-primary shadowed md:filter-none w-full ${
-              screen >= 800 && screen < 1400 ? "col-start-1 col-end-3 pt-4" : ""
+              screen >= 800 && screen < 1400 ? "col-start-1 col-end-3 pt-6" : ""
             }`}
           >
             <div className="w-full h-full flex justify-center items-center">
