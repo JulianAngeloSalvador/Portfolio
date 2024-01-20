@@ -74,7 +74,7 @@ export default function Stack() {
         <div className="mug-container">
           <div className="mug">
             <div
-              className={`mug-handle ${screen > 340 ? "-left-2" : "-right-2"}`}
+              className={`mug-handle ${screen > 380 ? "-left-2" : "-right-2"}`}
             />
           </div>
         </div>

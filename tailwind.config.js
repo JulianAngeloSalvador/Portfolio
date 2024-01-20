@@ -36,9 +36,6 @@ export default {
         md: "800px",
         sm_less: { max: "389px" },
         xs_max: { max: "350px" },
-        ipad_air: {
-          raw: "only screen and (min-width: 820px) and (max-height: 1200px)",
-        },
         ipad_lg: {
           raw: "only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (hover: none)",
         },
@@ -82,7 +79,7 @@ export default {
         blender2: "#3E76A2",
       },
       width: {
-        fluid_3xl: "min(1200px, 100%)",
+        fluid_3xl: "min(1300px, 100%)",
         fluid_2xl: "min(1100px, 100%)",
         fluid_xl: "min(900px, 80%)",
         fluid: "min(700px, 80%)",

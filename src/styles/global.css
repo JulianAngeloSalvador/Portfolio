@@ -126,10 +126,10 @@
     @apply text-highlight hover:text-interact;
   }
   .lead-content {
-    @apply text-base sm:text-2xl lg:text-lg xl:text-2xl;
+    @apply text-base sm:text-2xl lg:text-lg xl:text-2xl ipad_lg:text-3xl;
   }
   .lead-content-md {
-    @apply text-base sm_mid:text-xl;
+    @apply text-base sm_mid:text-xl ipad_lg:text-2xl;
   }
 
   .article-headline {
@@ -137,7 +137,7 @@
   }
 
   .section-headline {
-    @apply xs_max:text-2xl text-3xl sm_mid:text-5xl;
+    @apply xs_max:text-2xl text-3xl sm_mid:text-5xl ipad_lg:text-7xl;
   }
 
   /* Nav Component */
