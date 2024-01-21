@@ -29,7 +29,7 @@ export default function Index() {
       <section className="parallax-grid min-h-dvh text-secondary flex flex-col items-center justify-center md:text-center text-left gap-y-4 relative isolate">
         <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
         <header className="w-fluid_80 sm:w-fluid_xl 2xl:w-fluid_xl">
-          <h1 className="font-bold font-revalia py-4 landing-headline">
+          <h1 className="font-bold font-revalia py-4 pt-20 2xl:pt-4 landing-headline">
             Julian Salvador
           </h1>
 
@@ -79,15 +79,10 @@ export default function Index() {
         id="about"
       >
         <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
-        <main className="grid grid-cols-1 md:grid-cols-2 bg-tertiary w-fluid_2xl xl:w-[1400px]">
-          <div
-            className={`col-start-1 col-end-2 ${
-              screen >= 800 && screen < 1350
-                ? "col-start-1 col-end-3 row-start-2 row-end-3"
-                : "md:row-start-1 md:row-end-2 row-start-2 row-end-3"
-            } bg-primary`}
-          >
-            <article className="normal-fs bg-primary p-8 pt-0 sm:px-20 md:p-8 md:pb-16 text-fade flex flex-col gap-y-4 md:px-32 2xl:px-20 h-full relative -translate-y-12 md:translate-y-0 z-30 w-fluid_2xl mx-auto">
+        {/* grid grid-cols-1 md:grid-cols-2 */}
+        <main className="about-wrapper bg-tertiary w-fluid_2xl xl:w-[1400px]">
+          <section className={`about bg-primary`}>
+            <article className="normal-fs bg-primary text-fade flex flex-col gap-y-4 h-full relative justify-center -translate-y-12 md:translate-y-0 z-30 py-4 px-6 sm:px-14">
               <h1 className="article-headline text-secondary py-2">About Me</h1>
               <p className="">
                 Hey there! <span className="inline-block">👋</span> I'm Julian,
@@ -122,14 +117,10 @@ export default function Index() {
                 demands.
               </p>
             </article>
-          </div>
-          <section
-            className={`bg-primary shadowed md:filter-none w-full ${
-              screen >= 800 && screen < 1350 ? "col-start-1 col-end-3 pt-6" : ""
-            }`}
-          >
-            <div className="w-full h-full flex justify-center items-center">
-              <div className="rounded-full flex justify-center items-center w-fluid_80 aspect-square md:neumorph-outer relative -translate-y-16 md:translate-y-0 bg-primary ">
+          </section>
+          <section className={` bg-primary shadowed md:filter-none w-full`}>
+            <div className="w-full h-full flex justify-center items-center py-4">
+              <div className="rounded-full flex justify-center items-center w-fluid_60 aspect-square md:neumorph-outer relative -translate-y-16 md:translate-y-0 bg-primary ">
                 <div className="w-[92.5%] aspect-square rounded-full  overflow-hidden md:neumorph-inner bg-tertiary ">
                   <StaticImage
                     src="../images/temp_photo.png"
@@ -145,9 +136,9 @@ export default function Index() {
               </div>
             </div>
           </section>
+          <Stack />
         </main>
       </section>
-      <Stack />
     </Layout>
   )
 }

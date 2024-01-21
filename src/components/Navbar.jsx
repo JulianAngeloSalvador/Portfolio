@@ -113,7 +113,7 @@ export default function Navbar() {
 
       prevScroll = currentScroll
 
-      if (currentScroll < 650) {
+      if (currentScroll < 250) {
         scrollerTop.current.classList.add("opacity-0", "-bottom-full")
         scrollerTop.current.classList.remove("opacity-50", "bottom-3")
       } else {

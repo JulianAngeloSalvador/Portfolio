@@ -11,10 +11,6 @@ export default function Navlinks({
       tabIndex: "#about",
     },
     {
-      title: "Stack",
-      tabIndex: "#stack",
-    },
-    {
       title: "Projects",
       tabIndex: "#projects",
     },

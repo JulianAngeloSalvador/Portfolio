@@ -42,60 +42,68 @@ export default function Stack() {
   const content = stacks.concat(tools).map(tech => (
     <div
       key={tech}
-      className="outline outline-secondary outline-2 rounded-full py-2 px-4 text-secondary bg-primary font-semibold sm_less:flex-grow text-center normal-fs 2xl:py-4 2xl:px-6"
+      className="py-3 px-4 rounded-md text-fade bg-tertiary font-semibold sm_max:flex-grow text-center less-fs"
     >
       {tech}
     </div>
   ))
 
   return (
-    <section
-      id="stack"
-      className="parallax-grid min-h-dvh relative isolate overflow-hidden flex flex-col items-center"
-    >
-      {/* Objects */}
-      {/* <div className="absolute w-32 aspect-square top-1/2 -translate-y-1/2 right-32 cube-container hover:scale-150 transition duration-150 ease-in-out">
-        <Cube />
-      </div> */}
-
-      {/********/}
-
-      <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
-      <section className="w-full sm_less:flex-grow-0 flex-grow flex flex-col justify-center">
-        <h1 className="article-headline text-center text-secondary py-4">
-          Stack and Tools
-        </h1>
-
-        <main className="w-full sm_mid:w-fluid_xl ipad_lg:w-fluid flex flex-wrap justify-center gap-4 mx-auto px-6">
-          {content}
-        </main>
-      </section>
-      {screen > 220 && (
-        <section className="relative bottom-0 left-0 w-fluid_90 flex-grow">
-          <div className="mug-container">
-            <div className="mug">
-              <div
-                className={`mug-handle ${
-                  screen > 380 ? "-left-2" : "-right-2"
-                }`}
-              />
-            </div>
-          </div>
-          {screen > 350 && (
-            <div className="desktop-container">
-              <Desktop />
-            </div>
-          )}
-
-          <div
-            className={`laptop-container ${
-              screen > 350 ? "right-0" : "left-1/2 -translate-x-1/2"
-            }`}
-          >
-            <Laptop />
-          </div>
-        </section>
-      )}
+    <section className="stack w-full flex flex-col  px-2 ">
+      <h1 className="article-headline text-secondary text-center py-2">
+        Stack and Tools
+      </h1>
+      <main className="w-fluid_xl flex flex-wrap gap-2 mx-auto justify-center py-4 pb-6">
+        {content}
+      </main>
     </section>
+    // <section
+    //   id="stack"
+    //   className="parallax-grid min-h-dvh relative isolate overflow-hidden flex flex-col items-center"
+    // >
+    //   {/* Objects */}
+    //   {/* <div className="absolute w-32 aspect-square top-1/2 -translate-y-1/2 right-32 cube-container hover:scale-150 transition duration-150 ease-in-out">
+    //     <Cube />
+    //   </div> */}
+
+    //   {/********/}
+
+    //   <div className="absolute inset-0 bg-primary_transparent -z-[1]" />
+    //   <section className="w-full sm_less:flex-grow-0 flex-grow flex flex-col justify-center">
+    //     <h1 className="article-headline text-center text-secondary py-4">
+    //       Stack and Tools
+    //     </h1>
+
+    //     <main className="w-full sm_mid:w-fluid_xl ipad_lg:w-fluid flex flex-wrap justify-center gap-4 mx-auto px-6">
+    //       {content}
+    //     </main>
+    //   </section>
+    //   {screen > 220 && (
+    //     <section className="relative bottom-0 left-0 w-fluid_90 flex-grow">
+    //       <div className="mug-container">
+    //         <div className="mug">
+    //           <div
+    //             className={`mug-handle ${
+    //               screen > 380 ? "-left-2" : "-right-2"
+    //             }`}
+    //           />
+    //         </div>
+    //       </div>
+    //       {screen > 350 && (
+    //         <div className="desktop-container">
+    //           <Desktop />
+    //         </div>
+    //       )}
+
+    //       <div
+    //         className={`laptop-container ${
+    //           screen > 350 ? "right-0" : "left-1/2 -translate-x-1/2"
+    //         }`}
+    //       >
+    //         <Laptop />
+    //       </div>
+    //     </section>
+    //   )}
+    // </section>
   )
 }

@@ -41,6 +41,18 @@ export default {
           raw: "only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (hover: none)",
         },
       },
+      width: {
+        fluid_3xl: "min(1300px, 100%)",
+        fluid_2xl: "min(1100px, 100%)",
+        fluid_xl: "min(900px, 80%)",
+        fluid: "min(700px, 80%)",
+        fluid_90: "min(600px, 100%)",
+        fluid_80: "min(420px, 80%)",
+        fluid_60: "min(320px, 80%)",
+        fluid_40: "min(220px, 80%)",
+        fluid_desktop: "min(350px, 80%)",
+        fluid_laptop: "min(250px, 50%)",
+      },
       boxShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
         DEFAULT: "0 2px 4px var(--tw-shadow-color)",
@@ -79,18 +91,7 @@ export default {
         blender1: "#F69455",
         blender2: "#3E76A2",
       },
-      width: {
-        fluid_3xl: "min(1300px, 100%)",
-        fluid_2xl: "min(1100px, 100%)",
-        fluid_xl: "min(900px, 80%)",
-        fluid: "min(700px, 80%)",
-        fluid_90: "min(600px, 100%)",
-        fluid_80: "min(420px, 80%)",
-        fluid_60: "min(320px, 80%)",
-        fluid_40: "min(220px, 80%)",
-        fluid_desktop: "min(350px, 80%)",
-        fluid_laptop: "min(250px, 50%)",
-      },
+
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
         DEFAULT: "0 2px 4px var(--tw-shadow-color)",
