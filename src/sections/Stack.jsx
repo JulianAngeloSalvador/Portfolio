@@ -27,7 +27,7 @@ export default function Stack() {
     "Express",
     "React",
     "Node",
-    "API Integration",
+    "PHP",
   ]
 
   const tools = [
@@ -50,7 +50,7 @@ export default function Stack() {
   ))
 
   return (
-    <section className="stack w-full flex flex-col  px-2 ">
+    <section className="stack w-full flex flex-col px-2  ">
       <h1 className="article-headline text-secondary text-center py-2">
         Stack and Tools
       </h1>
