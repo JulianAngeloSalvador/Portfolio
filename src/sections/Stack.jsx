@@ -27,6 +27,7 @@ export default function Stack() {
     "Express",
     "React",
     "Node",
+    "API Integration",
   ]
 
   const tools = [
